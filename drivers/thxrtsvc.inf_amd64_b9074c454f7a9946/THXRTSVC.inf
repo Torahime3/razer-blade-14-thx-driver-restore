@@ -1,0 +1,69 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SoftwareComponent
+ClassGuid   = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider    = %THX%
+DriverVer = 06/17/2023,2.6.5.0
+CatalogFile = THXRTSVC.cat
+PnpLockdown = 0
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+VSSrv.exe=222
+VSSrvInit.exe=222
+VSHelper.exe=222
+
+[DestinationDirs]
+THXSrv.CopyList=11 ; %SystemRoot%\system32 
+
+[Manufacturer]
+%THX% = SrvComponents,NTamd64
+
+[SrvComponents.NTamd64]
+%Svc.ComponentDesc% = SrvComponent_Install,SWC\VEN_THX&PID_THXSVC
+
+; To enable logging for VSSrv/VSSrvInit add the LogPath regkey per below
+; HKLM, "Software\THX\THXSpatialAudio" ,"LogPath" , ,"%10%\Temp"
+; Any valid writable existing path is acceptable
+; VSSrv.log will be written to while VSSrv.exe is running. 
+; VSSrvInit.log will only be created upon install
+
+[SrvComponent_Install]
+CopyFiles = THXSrv.CopyList
+
+[SrvComponent_Install.Software]
+AddSoftware=THXServiceInstaller,,THX_Service_Software
+
+[THX_Service_Software]
+SoftwareType=1
+SoftwareBinary=VSSrvInit.exe
+SoftwareVersion=1.0.0.0
+
+[SrvComponent_Install.Services]
+AddService = ,2    ; no function driver
+AddService = VSSrv, 0x00000800, THX_Service_Install
+
+[THX_Service_Install]
+Description   = "THX Audio Service"
+DisplayName   = "VSSrv"
+ServiceType   = 0x00000010
+StartType     = 2
+ErrorControl  = 1
+ServiceBinary = %11%\VSSrv.exe
+Dependencies = "RPCSS"
+
+[THXSrv.CopyList]
+VSSrv.exe
+VSSrvInit.exe
+VSHelper.exe
+
+[Strings]
+THX           = "THX"
+Svc.ComponentDesc = "THX Spatial Audio Service Component"
+DiskId1           = "THX Spatial Audio Installation Disk"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_MULTI_SZ = 0x00010000

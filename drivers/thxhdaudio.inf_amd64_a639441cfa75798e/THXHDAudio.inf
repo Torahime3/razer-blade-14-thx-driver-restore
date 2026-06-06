@@ -1,0 +1,443 @@
+;===================================================================
+; THX HDAudio codec 
+; Copyright (c) 2021 THX Inc.
+;===================================================================
+[Version]
+Signature   = "$Windows NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = THX
+ExtensionId = {17B56683-7F95-4BAB-8031-AB5DE114A4CC}
+DriverVer = 06/17/2023,2.6.5.0
+CatalogFile = THXHDAudio.cat
+PnpLockdown = 1
+
+[Manufacturer]
+%ManufacturerName% = DeviceExtensions,NTamd64
+
+[DeviceExtensions.NTamd64]
+;===================================================================
+; HDX_RazerExt_THX
+;===================================================================
+; HDXSSRazer
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A581006
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A581007
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A581008
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A58100A
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A58100B
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A58100C
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A58200E
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A58200F
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1A582012
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582015
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A582015
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582016
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A582016
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582017
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A582017
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582018
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A582018
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1A582019
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A58201A
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A58201A
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A58201B
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A58201D
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A58201D
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A58201F
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582021
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A583003
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A583004
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A583005
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A583006
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A583007
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A583008
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A583009
+; HDXACPRazer
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1A582013
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582013
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A582013
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1A582014
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582014
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A582014
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A58201C
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1A58201E
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A58201E
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A58201E
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1A582020
+;===================================================================
+; HDX_TongfangExt_THX (THXAPO)
+;===================================================================
+; HDXTongfang
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1A58200D
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051087
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051088
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051097
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051116
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051121
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051122
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051123
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D05112B
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D051132
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051135
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051136
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D05113B
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D05113C
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051146
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D05114D
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D05114F
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051150
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051151
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051152
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051153
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051155
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051156
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D051158
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D051159
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D05115A
+; HDXACPTongfang
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051100
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051101
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051103
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051111
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051115
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051118
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051119
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051125
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051129
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D05112A
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051137
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D05113F
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_C,HDAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1D051154
+;===================================================================
+; HDX_WeibuExt_THX (TBTAPO / THXAPO)
+;===================================================================
+; HDXWeibu TBTAPO
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_D,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C1243
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_D,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C1244
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_E,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C1249
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_F,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C1250
+; HDXWeibu THXAPO
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C5730
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C5731
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C5730
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_B,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1C6C5731
+;===================================================================
+; HDX_EmdoorExt_THX (THXAPO)
+;===================================================================
+; HDXEmdoor
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820215
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820215
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820216
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820216
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820217
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820217
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820221
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820221
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820222
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,HDAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_27820222
+;===================================================================
+; HDX_QuantaExt_THX (THXAPO)
+;===================================================================
+; HDXQuanta
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D193800
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_1D193900
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1D193800
+%Device.Realtek.ExtensionDesc% = DeviceExtension_Install_RT_SKU_A,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0269&SUBSYS_1D193900
+;===================================================================
+; SSP-based codecs via iSST (TBTAPO)
+;===================================================================
+%Device.IntelSST.ExtensionDesc% = THXIntelSSTDeviceInterfaceRegistration,INTELAUDIO\LINKTYPE_03&DEVTYPE_04&VEN_8086&DEV_AE34&SUBSYS_00000000&REV_0000
+%Device.IntelSST.ExtensionDesc% = THXIntelSSTDeviceInterfaceRegistration,INTELAUDIO\LINKTYPE_03&DEVTYPE_04&VEN_8086&DEV_AE34&SUBSYS_00000001&REV_0001
+
+[DeviceExtension_Install_RT_SKU_A.NT]
+AddReg = PresetAddReg_RT_SKU_A, THXAPO_PresetAddReg
+
+[DeviceExtension_Install_RT_SKU_A.NT.HW]
+AddReg = FriendlyName_AddReg_RT
+
+[DeviceExtension_Install_RT_SKU_A.NT.Components]
+AddComponent = THXAPO,,THXAPO_Install
+AddComponent = THXSVC,,THXSVC_Install
+AddComponent = THXHSA,,THXHSA_Install
+AddComponent = THXSCU,,THXSCU_Install
+
+[DeviceExtension_Install_RT_SKU_B.NT]
+AddReg = PresetAddReg_RT_SKU_B, THXAPO_PresetAddReg
+
+[DeviceExtension_Install_RT_SKU_B.NT.HW]
+AddReg = FriendlyName_AddReg_RT
+
+[DeviceExtension_Install_RT_SKU_B.NT.Components]
+AddComponent = THXAPO,,THXAPO_Install
+AddComponent = THXSVC,,THXSVC_Install
+AddComponent = THXHSA,,THXHSA_Install
+AddComponent = THXSCU,,THXSCU_Install
+
+[DeviceExtension_Install_RT_SKU_C.NT]
+AddReg = PresetAddReg_RT_SKU_C, THXAPO_PresetAddReg
+
+[DeviceExtension_Install_RT_SKU_C.NT.HW]
+AddReg = FriendlyName_AddReg_RT
+
+[DeviceExtension_Install_RT_SKU_C.NT.Components]
+AddComponent = THXAPO,,THXAPO_Install
+AddComponent = THXSVC,,THXSVC_Install
+AddComponent = THXHSA,,THXHSA_Install
+AddComponent = THXSCU,,THXSCU_Install
+
+[DeviceExtension_Install_RT_SKU_D.NT]
+AddReg = PresetAddReg_RT_SKU_D, THXAPO_PresetAddReg
+
+[DeviceExtension_Install_RT_SKU_D.NT.HW]
+AddReg = FriendlyName_AddReg_RTTBT
+
+[DeviceExtension_Install_RT_SKU_D.NT.Components]
+AddComponent = THXAPO,,THXAPO_Install
+; no THXSVC for TBTAPO
+; no THXHSA for TBTAPO
+AddComponent = THXSCU,,THXSCU_Install
+
+[DeviceExtension_Install_RT_SKU_E.NT]
+AddReg = PresetAddReg_RT_SKU_E, THXAPO_PresetAddReg
+
+[DeviceExtension_Install_RT_SKU_E.NT.HW]
+AddReg = FriendlyName_AddReg_RTTBT
+
+[DeviceExtension_Install_RT_SKU_E.NT.Components]
+AddComponent = THXAPO,,THXAPO_Install
+; no THXSVC for TBTAPO
+; no THXHSA for TBTAPO
+AddComponent = THXSCU,,THXSCU_Install
+
+; Atom-based Celeron, Pentium devices on HDA codec
+[DeviceExtension_Install_RT_SKU_F.NT]
+AddReg = PresetAddReg_RT_SKU_F, THXAPO_PresetAddReg
+
+[DeviceExtension_Install_RT_SKU_F.NT.HW]
+AddReg = FriendlyName_AddReg_RTTBT
+
+[DeviceExtension_Install_RT_SKU_F.NT.Components]
+AddComponent = THXAPO,,THXAPO_SSE2_Install
+; no THXSVC for TBTAPO
+; no THXHSA for TBTAPO
+AddComponent = THXSCU,,THXSCU_Install
+
+[THXAPO_Install]
+ComponentIDs = VEN_THX&CID_THXAPO
+Description = "THX Spatial Audio Effects Component"
+
+[THXSVC_Install]
+ComponentIDs = VEN_THX&PID_THXSVC
+Description = "THX Spatial Audio Service"
+
+[THXHSA_Install]
+ComponentIDs = VEN_THX&PID_THXHSA
+Description = "THX Hardware Support Application"
+
+[THXSCU_Install]
+ComponentIDs = VEN_THX&PID_THXSCU
+Description = "THX Spatial Audio Configuration"
+
+[FriendlyName_AddReg_RT]
+HKR,,FriendlyName,,%ExtendedFriendlyNameRT%
+
+[FriendlyName_AddReg_RTTBT]
+HKR,,FriendlyName,,%ExtendedFriendlyNameRTTBT%
+
+[PresetAddReg_RT_SKU_A]
+;; render endpoint settings
+HKR,InterfaceSetting,PrimaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"          ;; PrimaryLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"           ;; SingleLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"HPAPO"         ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+HKR,InterfaceSetting,RearLineOutTopoSST,%REG_MULTI_SZ_APPEND%,"OutAPO"        ;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (Intel SST) 
+HKR,InterfaceSetting,RearLineOutTopoSST3,%REG_MULTI_SZ_APPEND%,"HPAPO"			;; Headphone endpoint with audio offloading DSP supported (Intel SST)
+
+;; capture endpoint settings
+HKR,InterfaceSetting,RtMicInTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+HKR,InterfaceSetting,RtMicInSSTTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+
+[PresetAddReg_RT_SKU_B]
+;; render endpoint settings
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"ComboAPO"
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"HPAPO"         ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+;; capture endpoint settings
+HKR,InterfaceSetting,RtMicInTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+
+[PresetAddReg_RT_SKU_C]
+;; render endpoint settings
+HKR,InterfaceSetting,PrimaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"          ;; PrimaryLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"           ;; SingleLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"HPAPO"         ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+HKR,InterfaceSetting,RearLineOutTopoHAP,%REG_MULTI_SZ_APPEND%,"OutAPO"		;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (AMD HAP) 
+HKR,InterfaceSetting,RearLineOutTopoHAP3,%REG_MULTI_SZ_APPEND%,"HPAPO"			;; Headphone endpoint with audio offloading DSP supported (AMD HAP)
+
+;; capture endpoint settings
+HKR,InterfaceSetting,RtMicInTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+;HKR,InterfaceSetting,RtMicInSSTTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"             ;; no corresponding entry for HAP? commented for now
+
+[PresetAddReg_RT_SKU_D]
+;; render endpoint settings
+HKR,InterfaceSetting,PrimaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"          ;; PrimaryLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"           ;; SingleLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"HPAPO"         ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+HKR,InterfaceSetting,RearLineOutTopoHAP,%REG_MULTI_SZ_APPEND%,"OutAPO"		;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (AMD HAP) 
+HKR,InterfaceSetting,RearLineOutTopoHAP3,%REG_MULTI_SZ_APPEND%,"HPAPO"			;; Headphone endpoint with audio offloading DSP supported (AMD HAP)
+
+;; capture endpoint settings
+HKR,InterfaceSetting,RtMicInTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+;HKR,InterfaceSetting,RtMicInSSTTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"             ;; no corresponding entry for HAP? commented for now
+
+[PresetAddReg_RT_SKU_E]
+;; render endpoint settings
+HKR,InterfaceSetting,PrimaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"          ;; PrimaryLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"           ;; SingleLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"HPAPO"         ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+HKR,InterfaceSetting,RearLineOutTopoSST,%REG_MULTI_SZ_APPEND%,"OutAPO"        ;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (Intel SST) 
+HKR,InterfaceSetting,RearLineOutTopoSST3,%REG_MULTI_SZ_APPEND%,"HPAPO"			;; Headphone endpoint with audio offloading DSP supported (Intel SST)
+
+;; capture endpoint settings
+HKR,InterfaceSetting,RtMicInTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+HKR,InterfaceSetting,RtMicInSSTTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+
+[PresetAddReg_RT_SKU_F]
+;; render endpoint settings
+HKR,InterfaceSetting,PrimaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"          ;; PrimaryLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"OutAPO"           ;; SingleLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"HPAPO"         ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+HKR,InterfaceSetting,RearLineOutTopoSST,%REG_MULTI_SZ_APPEND%,"OutAPO"        ;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (Intel SST) 
+HKR,InterfaceSetting,RearLineOutTopoSST3,%REG_MULTI_SZ_APPEND%,"HPAPO"			;; Headphone endpoint with audio offloading DSP supported (Intel SST)
+
+;; capture endpoint settings
+HKR,InterfaceSetting,RtMicInTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+HKR,InterfaceSetting,RtMicInSSTTopo,%REG_MULTI_SZ_APPEND%,"MicAPO"
+
+
+[THXAPO_PresetAddReg]
+HKR, InterfaceSetting\OutAPO\EP\0, %PKEY_THX_DEVICE_TYPE_ID%,,%THX_OUT_DEVICE_ID%
+HKR, InterfaceSetting\HPAPO\EP\0, %PKEY_THX_DEVICE_TYPE_ID%,,%THX_HP_DEVICE_ID%
+HKR, InterfaceSetting\ComboAPO\EP\0, %PKEY_THX_DEVICE_TYPE_ID%,,%THX_COMBO_DEVICE_ID%
+HKR, InterfaceSetting\MicAPO\EP\0, %PKEY_THX_DEVICE_TYPE_ID%,,%THX_MIC_DEVICE_ID%
+
+;; See https://docs.microsoft.com/en-us/windows-hardware/drivers/install/using-dirids for documentation on %16419%
+HKR, InterfaceSetting\OutAPO\EP\0, %PKEY_THX_CONFIG_PATH%,,%16419%\THX\thx_spatial.conf.json
+HKR, InterfaceSetting\HPAPO\EP\0, %PKEY_THX_CONFIG_PATH%,,%16419%\THX\thx_spatial.conf.json
+HKR, InterfaceSetting\ComboAPO\EP\0, %PKEY_THX_CONFIG_PATH%,,%16419%\THX\thx_spatial.conf.json
+HKR, InterfaceSetting\MicAPO\EP\0, %PKEY_THX_CONFIG_PATH%,,%16419%\THX\thx_spatial.conf.json
+
+[THXIntelSSTDeviceInterfaceRegistration]
+AddProperty = CustomBranding.Property
+
+[CustomBranding.Property]
+DeviceDetailedDescription,,,,%INTEL_SST_WITH_THX%
+
+[THXIntelSSTDeviceInterfaceRegistration.Components]
+AddComponent = THXAPO,,THXAPO_SSE2_Install
+AddComponent = THXSCU,,THXSCU_ISST_SSP_Install
+
+[THXAPO_SSE2_Install]
+ComponentIDs = VEN_THX&CID_THXAPO_SSE2
+Description = "THX Audio Processing Object Component for pre-AVX2 architectures."
+
+[THXSCU_ISST_SSP_Install]
+ComponentIDs = VEN_THX&PID_THXSCU_ISST_SSP
+Description = "Tuned By THX Audio Configuration"
+
+[THXIntelSSTDeviceInterfaceRegistration.HW]
+AddReg = THXIntelSSTDeviceInterfaceRegistration.HW.AddReg
+
+[THXIntelSSTDeviceInterfaceRegistration.HW.AddReg]
+HKR,,FriendlyName,,%INTEL_SST_WITH_THX%
+
+[THXIntelSSTDeviceInterfaceRegistration.interfaces]
+AddInterface = %KSCATEGORY_AUDIO%, "IntCAdspTopoRender_1", THXIntelSSTDeviceInterfaceRegistration.I
+AddInterface = %KSCATEGORY_TOPOLOGY%, "IntCAdspTopoRender_1", THXIntelSSTDeviceInterfaceRegistration.I
+AddInterface = %KSCATEGORY_AUDIO%, "IntCAdspTopoRender_2", THXIntelSSTDeviceInterfaceRegistration.I
+AddInterface = %KSCATEGORY_TOPOLOGY%, "IntCAdspTopoRender_2", THXIntelSSTDeviceInterfaceRegistration.I
+
+[THXIntelSSTDeviceInterfaceRegistration.I]
+AddReg = THXIntelSSTDeviceInterfaceRegistration.I.AddReg
+
+[THXIntelSSTDeviceInterfaceRegistration.I.AddReg]
+HKR,EP\0,%PKEY_THX_DEVICE_TYPE_ID%,,"VSCombo"
+HKR,EP\0,%PKEY_THX_CONFIG_PATH%,,%16419%\THX\thx_spatial.conf.json
+
+HKR,FX\0,%PKEY_FX_Association%,,%KSNODETYPE_ANY%
+HKR,FX\0,%PKEY_FX_Association%,,%KSNODETYPE_ANY%
+
+; Host based processing
+HKR,FX\0,%PKEY_CompositeFX_StreamEffectClsid%,%REG_MULTI_SZ%,%THX_SFX_APO_HOST_CLASSID%
+HKR,FX\0,%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,%REG_MULTI_SZ%,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+HKR,FX\0,%PKEY_CompositeFX_ModeEffectClsid%,%REG_MULTI_SZ%,%THX_MFX_APO_HOST_CLASSID%
+HKR,FX\0,%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,%REG_MULTI_SZ%,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+; Offload based processing - e.g. long buffers
+HKR,FX\0,%PKEY_CompositeFX_Offload_StreamEffectClsid%,%REG_MULTI_SZ%,%THX_SFX_APO_OFFLOAD_CLSID%
+HKR,FX\0,%PKEY_SFX_Offload_ProcessingModes_Supported_For_Streaming%,%REG_MULTI_SZ%,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+HKR,FX\0,%PKEY_CompositeFX_Offload_ModeEffectClsid%,%REG_MULTI_SZ%,%THX_MFX_APO_OFFLOAD_CLSID%
+HKR,FX\0,%PKEY_MFX_Offload_ProcessingModes_Supported_For_Streaming%,%REG_MULTI_SZ%,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+HKR,EP\0,%PKEY_AudioEndpoint_Association%,,%KSNODETYPE_ANY%
+HKR,EP\0,%PKEY_AudioEndpoint_Disable_SysFx%, %REG_DWORD%, 0x00000000 ; Enable SysFX
+
+
+[Strings]
+ManufacturerName     = "THX"
+Device.Realtek.ExtensionDesc = "THX Realtek Device Extension"
+Device.IntelSST.ExtensionDesc = "THX Intel SST Device Extension"
+MfgCopyright	     = "Copyright (c) 2021 THX Inc. All Rights Reserved"
+
+ExtendedFriendlyNameRT  = "Realtek(R) Audio Codec with THX Spatial Audio"
+ExtendedFriendlyNameRTTBT = "Realtek(R) Audio Tuned By THX"
+INTEL_SST_WITH_THX   = "Intel(R) SST with Tuned By THX Audio"
+
+THX_SFX_APO_HOST_CLASSID                         = "{C792E395-BD30-472D-9A2F-2783D7FAF812}"
+THX_MFX_APO_HOST_CLASSID                         = "{68650828-CA0F-4196-9096-5F50931AF10A}"
+THX_SFX_APO_OFFLOAD_CLSID                        = "{DB605787-5A21-4A87-AAB3-B0C2DF66F586}"
+THX_MFX_APO_OFFLOAD_CLSID                        = "{E6769B7D-B58F-45CA-B6F2-964B83EDCB76}"
+
+REG_DWORD                                     = 0x00010001
+REG_MULTI_SZ                                  = 0x00010000
+REG_MULTI_SZ_APPEND                           = 0x00010008
+REG_MULTI_SZ_DELETE                           = 0x00018002
+REG_EXPAND_SZ                                 = 0x00020000
+REG_BINARY_NOCLOBBER                          = 0x00030003
+REG_BINARY                                    = 0x00000001
+
+PKEY_THX_DEVICE_TYPE_ID     = "{D5E8F0AB-4DE6-4D91-AB21-68868DDA6A4A},0"
+THX_OUT_DEVICE_ID     = "VSOut"
+THX_HP_DEVICE_ID      = "VSHP"
+THX_COMBO_DEVICE_ID   = "VSCombo"
+THX_MIC_DEVICE_ID     = "VSMic"
+
+PKEY_THX_CONFIG_PATH  = "{D5E8F0AB-4DE6-4D91-AB21-68868DDA6A4A},1"
+
+KSCATEGORY_AUDIO                                 = "{6994AD04-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_TOPOLOGY                              = "{DDA54A40-1E4C-11D1-A050-405705C10000}"
+KSCATEGORY_RENDER                                = "{65E8773E-8F56-11D0-A3B9-00A0C9223196}"
+
+PKEY_AudioEndpoint_Association                   = "{1DA5D803-D492-4EDD-8C23-E0C0FFEE7F0E},2"
+PKEY_AudioEndpoint_Disable_SysFx                 = "{1DA5D803-D492-4EDD-8C23-E0C0FFEE7F0E},5"
+
+PKEY_FX_Association                          = "{D04E05A6-594B-4FB6-A80D-01AF5EED7D1D},0"
+PKEY_CompositeFX_StreamEffectClsid           = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},13"  
+PKEY_CompositeFX_ModeEffectClsid             = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},14"
+PKEY_CompositeFX_Offload_StreamEffectClsid   = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},19"  
+PKEY_CompositeFX_Offload_ModeEffectClsid     = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},20"
+
+PKEY_SFX_ProcessingModes_Supported_For_Streaming         = "{D3993A3F-99C2-4402-B5EC-A92A0367664B},5"
+PKEY_MFX_ProcessingModes_Supported_For_Streaming         = "{D3993A3F-99C2-4402-B5EC-A92A0367664B},6"
+PKEY_SFX_Offload_ProcessingModes_Supported_For_Streaming = "{D3993A3F-99C2-4402-B5EC-A92A0367664B},11"
+PKEY_MFX_Offload_ProcessingModes_Supported_For_Streaming = "{D3993A3F-99C2-4402-B5EC-A92A0367664B},12"
+
+KSNODETYPE_ANY = "{00000000-0000-0000-0000-000000000000}"
+
+AUDIO_SIGNALPROCESSINGMODE_DEFAULT = "{C18E2F7E-933D-4965-B7D1-1EEF228D2AF3}"
+AUDIO_SIGNALPROCESSINGMODE_RAW     = "{9E90EA20-B493-4FD1-A1A8-7E1361A956CF}"

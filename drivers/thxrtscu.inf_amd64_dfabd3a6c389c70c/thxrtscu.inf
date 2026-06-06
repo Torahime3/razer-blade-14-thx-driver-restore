@@ -1,0 +1,74 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SoftwareComponent
+ClassGuid   = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider    = %THX%
+DriverVer = 01/20/2022,2.5.6.0
+CatalogFile = THXRTSCU.cat
+PnpLockDown = 1
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+spatial-config-util.exe=222
+;thx_spatial.conf.json=222
+
+[DestinationDirs]
+THXSCU_CopyList=11 ; %SystemRoot%\system32 
+;THXSPA_Config_CopyList=16419,THX
+
+[Manufacturer]
+%THX% = SCUComponents,NTamd64
+
+[SCUComponents.NTamd64]
+%SCU.ComponentDesc% = SCUComponent_InstallSystem,SWC\VEN_THX&PID_THXSCU
+%SCU.ComponentDesc% = SCUComponent_Install_ISST_SSP,SWC\VEN_THX&PID_THXSCU_ISST_SSP
+
+[SCUComponent_InstallSystem]
+CopyFiles = THXSCU_CopyList
+
+[SCUComponent_InstallSystem.Software]
+AddSoftware=THXConfigInstallerSystem.2.5.6.0,1,THX_Config_Software
+
+[THX_Config_Software]
+SoftwareType=1
+SoftwareBinary=spatial-config-util.exe
+SoftwareArguments=-syslog, -writeout %16419%\THX
+SoftwareVersion=%SCU_VERSION%
+
+[SCUComponent_InstallSystem.Services]
+AddService = ,2    ; no function driver
+
+; iSST/Everest
+[SCUComponent_Install_ISST_SSP]
+CopyFiles = THXSCU_CopyList
+
+[SCUComponent_Install_ISST_SSP.Software]
+AddSoftware=THXConfigInstallerISST.2.5.6.0,1,THX_Config_Software_ISST_SSP
+
+[THX_Config_Software_ISST_SSP]
+SoftwareType=1
+SoftwareBinary=spatial-config-util.exe
+SoftwareArguments=-syslog, -oem, -writeout %16419%\THX
+SoftwareVersion=%SCU_VERSION%
+
+[SCUComponent_Install_ISST_SSP.Services]
+AddService = ,2    ; no function driver
+
+[THXSCU_CopyList]
+spatial-config-util.exe
+
+;[THXSPA_Config_CopyList]
+;thx_spatial.conf.json
+
+[Strings]
+THX           = "THX"
+SCU.ComponentDesc = "THX Spatial Audio Configuration Component"
+SCU_VERSION = "3.8.0.0"
+DiskId1           = "THX Spatial Audio Installation Disk"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_MULTI_SZ = 0x00010000
+

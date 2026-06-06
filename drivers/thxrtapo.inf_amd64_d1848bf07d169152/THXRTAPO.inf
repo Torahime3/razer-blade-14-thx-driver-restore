@@ -1,0 +1,226 @@
+;===================================================================
+; THX APO component
+; Copyright (c) 2021 THX Inc.
+;===================================================================
+[Version]
+Signature   = "$Windows NT$"
+Class       = AudioProcessingObject
+ClassGuid   = {5989fce8-9cd0-467d-8a6a-5419e31529d4}
+Provider    = THX
+DriverVer = 05/18/2023,2.6.4.0
+CatalogFile = THXRTAPO.cat
+PnpLockdown = 1
+
+[SourceDisksNames] 
+1="THX APO Component Source"
+
+[SourceDisksFiles]
+THXOutAPO-AVX2-v2.6.dll=1
+THXOutAPO-SSE2-v2.6.dll=1
+;THXMicAPO-SSE2-v2.6.dll=1
+
+[DestinationDirs]
+DefaultDestDir = 11
+
+[SignatureAttributes]
+THXOutAPO-AVX2-v2.6.dll = SignatureAttributes.PETrust
+THXOutAPO-SSE2-v2.6.dll = SignatureAttributes.PETrust
+;THXMicAPO-SSE2-v2.6.dll = SignatureAttributes.PETrust
+
+[SignatureAttributes.PETrust]
+PETrust = true
+
+[Manufacturer]
+%ManufacturerName% = THXAPO_Component,NTamd64
+
+[THXAPO_Component.NTamd64]
+%THXAPO_Component_Description% = THXAPO_Component_Install_AVX2,SWC\VEN_THX&CID_THXAPO
+%THXAPO_Component_Description_SSE2% = THXAPO_Component_Install_SSE2,SWC\VEN_THX&CID_THXAPO_SSE2
+
+[THXAPO_Component_Install_SSE2]
+CopyFiles = THXAPO_SSE2_CopyFiles
+AddReg = COM_Registration_Common,COM_Registration_SSE2,Audio_Engine_Registration
+
+[THXAPO_Component_Install_SSE2.Services]
+AddService=,2
+
+[THXAPO_SSE2_CopyFiles]
+THXOutAPO-SSE2-v2.6.dll
+;THXMicAPO-SSE2-v2.6.dll
+
+[THXAPO_Component_Install_AVX2]
+CopyFiles = THXAPO_AVX2_CopyFiles
+AddReg = COM_Registration_Common,COM_Registration_AVX2,Audio_Engine_Registration
+
+[THXAPO_AVX2_CopyFiles]
+THXOutAPO-AVX2-v2.6.dll
+;THXMicAPO-SSE2-v2.6.dll
+
+[COM_Registration_Common]
+HKCR,CLSID\%OUT_FX_STREAM_HOST_CLSID%,,,%Out_SFX_HOST_FriendlyName%
+HKCR,CLSID\%OUT_FX_STREAM_HOST_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+HKCR,CLSID\%OUT_FX_STREAM_OFFLOAD_CLSID%,,,%Out_SFX_OFFLOAD_FriendlyName%
+HKCR,CLSID\%OUT_FX_STREAM_OFFLOAD_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+;HKCR,CLSID\%CHAT_FX_STREAM_CLSID%,,,%Chat_SFX_FriendlyName%
+;HKCR,CLSID\%CHAT_FX_STREAM_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+HKCR,CLSID\%OUT_FX_MODE_HOST_CLSID%,,,%Out_MFX_HOST_FriendlyName%
+HKCR,CLSID\%OUT_FX_MODE_HOST_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+HKCR,CLSID\%OUT_FX_MODE_OFFLOAD_CLSID%,,,%Out_MFX_OFFLOAD_FriendlyName%
+HKCR,CLSID\%OUT_FX_MODE_OFFLOAD_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+; VS Mic Mode effect APO COM registration
+;HKCR,CLSID\%MIC_FX_MODE_CLSID%,,,%Mic_MFX_FriendlyName%
+;HKCR,CLSID\%MIC_FX_MODE_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXMicAPO-SSE2-v%Generation%.dll
+;HKCR,CLSID\%MIC_FX_MODE_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+[COM_Registration_AVX2]
+HKCR,CLSID\%OUT_FX_STREAM_HOST_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-AVX2-v%Generation%.dll
+HKCR,CLSID\%OUT_FX_STREAM_OFFLOAD_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-AVX2-v%Generation%.dll
+;HKCR,CLSID\%CHAT_FX_STREAM_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-AVX2-v%Generation%.dll
+HKCR,CLSID\%OUT_FX_MODE_HOST_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-AVX2-v%Generation%.dll
+HKCR,CLSID\%OUT_FX_MODE_OFFLOAD_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-AVX2-v%Generation%.dll
+
+[COM_Registration_SSE2]
+HKCR,CLSID\%OUT_FX_STREAM_HOST_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-SSE2-v%Generation%.dll
+HKCR,CLSID\%OUT_FX_STREAM_OFFLOAD_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-SSE2-v%Generation%.dll
+;HKCR,CLSID\%CHAT_FX_STREAM_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-SSE2-v%Generation%.dll
+HKCR,CLSID\%OUT_FX_MODE_HOST_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-SSE2-v%Generation%.dll
+HKCR,CLSID\%OUT_FX_MODE_OFFLOAD_CLSID%\InProcServer32,,0x00020000,%%SystemRoot%%\System32\THXOutAPO-SSE2-v%Generation%.dll
+
+[Audio_Engine_Registration]
+; VS Output Stream effect APO registration
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "FriendlyName", ,%Out_SFX_HOST_FriendlyName%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "Copyright", ,%MfgCopyright%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MajorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MinorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "Flags", 0x00010001, %VSOUTPUTAPOSFXHOST_FLAGS%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MinInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MaxInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MinOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MaxOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_HOST_CLSID%, "APOInterface0", ,"{FD7F2B29-24D0-4B5C-B177-592C39F9CA10}"
+
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "FriendlyName", ,%Out_SFX_OFFLOAD_FriendlyName%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "Copyright", ,%MfgCopyright%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MajorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MinorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "Flags", 0x00010001, %VSOUTPUTAPOSFXOFFLOAD_FLAGS%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MinInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MaxInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MinOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MaxOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_STREAM_OFFLOAD_CLSID%, "APOInterface0", ,"{FD7F2B29-24D0-4B5C-B177-592C39F9CA10}"
+
+; VS Chat Stream effect APO registration
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "FriendlyName", ,%Chat_SFX_FriendlyName%
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "Copyright", ,%MfgCopyright%
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MajorVersion", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MinorVersion", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "Flags", 0x00010001, %VSCHATAPOSFX_FLAGS%
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MinInputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MaxInputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MinOutputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MaxOutputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%CHAT_FX_STREAM_CLSID%, "APOInterface0", ,"{FD7F2B29-24D0-4B5C-B177-592C39F9CA10}"
+
+; VS Out Mode effect APO registration
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "FriendlyName", ,%Out_MFX_HOST_FriendlyName%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "Copyright", ,%MfgCopyright%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MajorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MinorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "Flags", 0x00010001, %VSOUTPUTAPOMFXHOST_FLAGS%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MinInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MaxInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MinOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MaxOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_HOST_CLSID%, "APOInterface0", ,"{FD7F2B29-24D0-4B5C-B177-592C39F9CA10}"
+
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "FriendlyName", ,%Out_MFX_OFFLOAD_FriendlyName%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "Copyright", ,%MfgCopyright%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MajorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MinorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "Flags", 0x00010001, %VSOUTPUTAPOMFXOFFLOAD_FLAGS%
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MinInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MaxInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MinOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MaxOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%OUT_FX_MODE_OFFLOAD_CLSID%, "APOInterface0", ,"{FD7F2B29-24D0-4B5C-B177-592C39F9CA10}"
+
+; VS Mic Mode effect APO registration
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "FriendlyName", ,%Mic_MFX_FriendlyName%
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "Copyright", ,%MfgCopyright%
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MajorVersion", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MinorVersion", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "Flags", 0x00010001, %VSMICAPOMFX_FLAGS%
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MinInputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MaxInputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MinOutputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MaxOutputConnections", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+;HKCR,AudioEngine\AudioProcessingObjects\%MIC_FX_MODE_CLSID%, "APOInterface0", ,"{FD7F2B29-24D0-4B5C-B177-592C39F9CA10}"
+
+[THXAPO_Component_Install_AVX2.HW]
+AddReg = FriendlyName_AddReg
+
+[FriendlyName_AddReg]
+HKR,,FriendlyName,,%THXAPO_Component_FriendlyName%
+
+[THXAPO_Component_Install_AVX2.Services]
+AddService=,2    ; no function driver, install a null driver.
+
+[Strings]
+Generation = "2.6"
+ManufacturerName     = "THX"
+THXAPO_Component_Description = "THX Audio Processing Object Component"
+THXAPO_Component_Description_SSE2 = "THX Audio Processing Object Component for pre-AVX2 x64 Architectures"
+THXAPO_Component_FriendlyName = "THX Audio Processing Object Component"
+
+MfgCopyright	     = "Copyright (c) 2021 THX Inc. All Rights Reserved"
+
+REG_DWORD                                     = 0x00010001
+REG_MULTI_SZ                                  = 0x00010000
+REG_MULTI_SZ_APPEND                           = 0x00010008
+REG_MULTI_SZ_DELETE                           = 0x00018002
+REG_EXPAND_SZ                                 = 0x00020000
+REG_BINARY_NOCLOBBER                          = 0x00030003
+REG_BINARY                                    = 0x00000001
+
+OUT_FX_STREAM_HOST_CLSID       = "{C792E395-BD30-472D-9A2F-2783D7FAF812}"
+OUT_FX_STREAM_OFFLOAD_CLSID    = "{DB605787-5A21-4A87-AAB3-B0C2DF66F586}"
+OUT_FX_MODE_HOST_CLSID         = "{68650828-CA0F-4196-9096-5F50931AF10A}"
+OUT_FX_MODE_OFFLOAD_CLSID      = "{E6769B7D-B58F-45CA-B6F2-964B83EDCB76}"
+;CHAT_FX_STREAM_CLSID           = "{C4993045-DE76-4CDA-A163-B370E30C503E}"
+;MIC_FX_MODE_CLSID              = "{868989EE-5D2F-42AE-A7E4-EA830D24A684}"
+
+; see audioenginebaseapo.idl for APO_FLAG enum values
+VSOUTPUTAPOSFXHOST_FLAGS    = 0x0000000c
+VSOUTPUTAPOSFXOFFLOAD_FLAGS = 0x0000000c
+VSOUTPUTAPOMFXHOST_FLAGS    = 0x0000000e
+VSOUTPUTAPOMFXOFFLOAD_FLAGS = 0x0000000e
+;VSCHATAPOSFX_FLAGS          = 0x0000000e
+;VSMICAPOMFX_FLAGS           = 0x0000000e
+
+Out_SYSFX_FriendlyName        = "THX Spatial Audio Speaker/HP APO"
+Out_SFX_HOST_FriendlyName     = "THX Spatial Audio Speaker/HP APO (host stream effect)"
+Out_MFX_HOST_FriendlyName     = "THX Spatial Audio Speaker/HP APO (host mode effect)"
+Out_SFX_OFFLOAD_FriendlyName  = "THX Spatial Audio Speaker/HP APO (offload stream effect)"
+Out_MFX_OFFLOAD_FriendlyName  = "THX Spatial Audio Speaker/HP APO (offload mode effect)"
+;Chat_SYSFX_FriendlyName       = "THX Spatial Audio Chat APO"
+;Chat_SFX_FriendlyName         = "THX Spatial Audio Chat APO (stream effect)"
+;Mic_SYSFX_FriendlyName        = "THX Spatial Audio Mic APO"
+;Mic_MFX_FriendlyName          = "THX Spatial Audio Mic APO (mode effect)"

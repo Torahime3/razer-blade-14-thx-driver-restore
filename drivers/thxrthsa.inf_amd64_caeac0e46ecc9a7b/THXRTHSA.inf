@@ -1,0 +1,60 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SoftwareComponent
+ClassGuid   = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider    = %THX%
+DriverVer = 05/18/2023,2.6.4.0
+CatalogFile = THXRTHSA.cat
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+
+[DestinationDirs]
+
+[SignatureAttributes]
+
+[SignatureAttributes.DRM]
+DRMLevel=1300
+
+[SignatureAttributes.PETrust]
+PETrust=true
+
+[Manufacturer]
+%THX% = HsaComponents,NTamd64
+
+[HsaComponents.NTamd64]
+%Hsa.ComponentDesc% = HsaComponent_Install,SWC\VEN_THX&PID_THXHSA
+
+[HsaComponent_Install]
+Include   = wdmaudio.inf
+AddReg = ConfigAddReg
+
+[ConfigAddReg]
+HKLM, "Software\THX"
+HKLM, "Software\THX\THXSpatialAudio"
+HKLM, "Software\THX\THXSpatialAudio", "DRAPO_B" ,%REG_DWORD% ,0x7fe4196e
+HKLM, "Software\THX\THXSpatialAudio" ,"HO_B" ,%REG_DWORD% ,0x7fe4196e
+HKLM, "Software\THX\THXSpatialAudio" ,"PH_B" ,%REG_DWORD% ,0x2c346c51
+HKLM, "Software\THX\THXSpatialAudio" ,"DRAPONotif" ,%REG_DWORD% ,0x12c4e9b1
+HKLM, "Software\THX\THXSpatialAudio" ,"DRCFeature" , ,"MaxAudio"
+
+[HsaComponent_Install.Services]
+AddService = ,2    ; no function driver
+
+[HsaComponent_Install.Software]
+AddSoftware=THXAudioControl,,THX_Audio_Control_Install
+
+[THX_Audio_Control_Install]
+SoftwareType=2
+SoftwareID=pfn://THXLtd.THXSpatialAudioControl_zgheytcpjsgqw
+
+[Strings]
+THX               = "THX"
+Hsa.ComponentDesc = "THX Spatial Audio Hardware Support Application"
+DiskId1           = "THX Spatial Audio HSA Installation Disk"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_MULTI_SZ = 0x00010000

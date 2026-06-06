@@ -1,0 +1,56 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = %OrganizationName%
+ExtensionId = {A9FAE730-FE66-4D56-A160-29263E8FF026}
+DriverVer   = 01/04/2022, 6.0.9292.1
+CatalogFile = HDXRTAPOExt.cat
+PnpLockDown = 1
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+netstate_AD38_Q_wtg_AD72.dat=222
+
+[DestinationDirs]
+DefaultDestDir=13
+
+[Manufacturer]
+%MfgName% = DeviceExtensions,NTamd64.10.0...15063
+
+[DeviceExtensions.NTamd64.10.0...15063]
+%Device.ExtensionDesc% = DeviceExtension_Install,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A583005
+%Device.ExtensionDesc% = DeviceExtension_Install,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A58201B
+%Device.ExtensionDesc% = DeviceExtension_Install, INTELAUDIO\FUNC_01&VEN_10EC&DEV_0274&SUBSYS_1A58100B
+%Device.ExtensionDesc% = DeviceExtension_Install, HDAUDIO\FUNC_01&VEN_10EC&DEV_0897&SUBSYS_1A58201C
+
+[DeviceExtension_Install]
+CopyFiles = Gen4Model.CopyList
+AddReg = Gen4Model.AddReg
+
+[Gen4Model.CopyList]
+netstate_AD38_Q_wtg_AD72.dat
+
+[Gen4Model.AddReg]
+HKR,APOTunings,ExtraTunings,%REG_MULTI_SZ%,"NParam"
+HKR,APOTunings\NParam,"{021C6000-DB7C-4A30-8977-483AEF576090},0",0x00010001,0
+HKR,APOTunings\NParam,"{021C6000-DB7C-4A30-8977-483AEF576090},1",0x00010001,2
+HKR,APOTunings\NParam,"{021C6000-DB7C-4A30-8977-483AEF576090},2",0x00010001,1
+HKR,APOTunings\NParam,"{021C6000-DB7C-4A30-8977-483AEF576090},4",0,%13%\netstate_AD38_Q_wtg_AD72
+HKR,APOTunings\NParam,"{0F8412D3-DC5C-4DB3-B174-DC47A859435C},10",0x00010001,0
+HKR,APOTunings\NParam,"{0F8412D3-DC5C-4DB3-B174-DC47A859435C},11",0x00010001,1
+
+[Strings]
+OrganizationName     = "Realtek Semiconductor Corp."
+MfgName              = "Realtek"
+Realtek              = "Realtek"
+Device.ExtensionDesc = "Realtek Device Extension"
+DiskId1              = "Realtek Device Extension Installation Disk"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_SZ = 0x00000000
+REG_MULTI_SZ = 0x00010000
+
